@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, ActivityIndicator, FlatList } from 'react-native';
-//import { useNavigation } from '@react-navigation/native';
-import { COLORS } from '../constants';
+import { useNavigation } from '@react-navigation/native';
+import { COLORS, FONTS, SIZES } from '../constants';
+import CategoryFruits from '../Components/CategoryFruits';
 
 const appliancesURL = "http://192.168.1.102:3001/appliances";
 
@@ -51,7 +52,7 @@ function renderHeader() {
 
 function Vegetables() {
 
-    //const navigation = useNavigation();
+    const navigation = useNavigation();
     const [isLoading, setIsLoading] = useState(true)
     const [fruits, setFruits] = useState([])
 
@@ -70,12 +71,23 @@ function Vegetables() {
                 <FlatList
                     data={fruits}
                     keyExtractor={item => `${item.id}`}
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
                     keyboardDismissMode="on-drag"
                     renderItem={({ item, index }) => {
                         return (
-                            <View>
-                                <Text>{item.name}</Text>
-                            </View>
+                            <CategoryFruits
+                                item={item}
+                                containerStyle={{
+                                    height: 210,
+                                    padding: 5,
+                                    backgroundColor: "#fff",
+                                    marginHorizontal: 10,
+                                    marginVertical: 10,
+                                    elevation: 8,
+                                }}
+                                onPress={() => navigation.navigate("ComputerDetails", { itemId: item })}
+                            />
                         )
                     }}
                 />
@@ -88,7 +100,7 @@ function Fruits() {
 
     return (
         <ScrollView>
-            <View style={{ backgroundColor: COLORS.white, }}>
+            <View>
                 {renderHeader()}
                 {Vegetables()}
             </View>

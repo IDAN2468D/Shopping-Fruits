@@ -47,6 +47,7 @@ export const SIZES = {
     body3: 16,
     body4: 15,
     body5: 12,
+    fontWeight: 'bold',
 
     width,
     height

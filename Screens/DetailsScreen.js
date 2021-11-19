@@ -6,11 +6,18 @@ import Button from '../Components/Button';
 
 function DetailsScreen({ navigation, route }) {
 
+    const [state, setstate] = useState(null)
+    const { itemId } = route.params;
+
+    useEffect(() => {
+        setstate(itemId)
+    }, [])
+
     function HeaderComponentList() {
         return (
             <View>
-                <View style={{ marginTop: 30, alignItems: "center", }}>
-                    <Image style={{ width: 370, height: 200, borderRadius: SIZES.radius }} source={{ uri: itemId.image }} />
+                <View style={{ marginTop: 10 }}>
+                    <Image resizeMode="contain" style={{ width: SIZES.width, height: 420 }} source={{ uri: itemId.image }} />
                 </View>
                 <View style={{ marginTop: 20, marginHorizontal: 20, }}>
                     <Text style={{ ...FONTS.h2, color: COLORS.black, fontWeight: "bold" }}>{itemId.name}</Text>
@@ -31,7 +38,7 @@ function DetailsScreen({ navigation, route }) {
                         <Text style={{ marginLeft: 10, fontWeight: "bold", color: COLORS.lightGreen, ...FONTS.h3 }}>({itemId.Percentages}% Off)</Text>
                     </View>
                 </View>
-                <View style={{ paddingHorizontal: 15, paddingVertical: 10, }}>
+                <View style={{ paddingHorizontal: 15, paddingVertical: 10 }}>
                     <Button
                         buttonText="Buy Now"
                         containerStyle={{

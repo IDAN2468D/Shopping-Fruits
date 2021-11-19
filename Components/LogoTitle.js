@@ -27,7 +27,7 @@ function LogoTitle({ name }) {
                         {name}
                     </Text>
                 </View>
-                <View style={{ paddingHorizontal: 240, }}>
+                <View style={{ paddingHorizontal: 230 }}>
                     <TouchableOpacity onPress={() => console.log("Navigtions")}>
                         <Image
                             source={icons.Navigtions}
@@ -40,7 +40,6 @@ function LogoTitle({ name }) {
                     </TouchableOpacity>
                 </View>
             </View>
-            <Search />
         </View >
     )
 }

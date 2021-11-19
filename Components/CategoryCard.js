@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { COLORS, FONTS, SIZES } from '../constants';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 function CategoryCard({ containerStyle, categiryItem, onPress, item }) {
+
+    const [isFavourite, setIsFavourite] = useState(false)
+
 
     return (
         <View style={{ flex: 1 }}>
@@ -36,11 +39,11 @@ function CategoryCard({ containerStyle, categiryItem, onPress, item }) {
                         top: 5,
                     }}
                 >
-                    <TouchableOpacity onPress={() => console.log("isFavourite")}>
-                        <Icon name="heart"
+                    <TouchableOpacity onPress={() => setIsFavourite(!isFavourite)}>
+                        <Icon name={isFavourite ? "heart" : "hearto"}
                             style={{
                                 fontSize: 20,
-                                color: item.isFavourite ? COLORS.red : COLORS.gray,
+                                color: isFavourite ? COLORS.red : COLORS.gray,
                                 top: 5,
                             }}
                         />
