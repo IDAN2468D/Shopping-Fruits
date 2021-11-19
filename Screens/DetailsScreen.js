@@ -6,13 +6,6 @@ import Button from '../Components/Button';
 
 function DetailsScreen({ navigation, route }) {
 
-    const [state, setstate] = useState(null)
-    const { itemId } = route.params;
-
-    useEffect(() => {
-        setstate(itemId)
-    }, [])
-
     function HeaderComponentList() {
         return (
             <View>

@@ -6,10 +6,10 @@ function LogoMyAccount({ name, email, containerStyle }) {
     return (
         <View style={{ flex: 1 }}>
             <View style={{ flex: 1, alignItems: "center", justifyContent: 'center' }}>
-                <View style={{ alignItems: 'center', paddingHorizontal: 65, }}>
+                <View style={{ alignItems: 'center', paddingHorizontal: 75, }}>
                     <Image source={images.Avatar} resizeMode="contain" style={{ width: 100, height: 100, borderRadius: 30 }} />
-                    <Text style={{ ...FONTS.body2, color: COLORS.white, textAlign: "center" }}>{name}</Text>
-                    <Text style={{ ...FONTS.body2, color: COLORS.white, textAlign: "center" }}>{email}</Text>
+                    <Text style={{ ...FONTS.body3, color: COLORS.white, textAlign: "center" }}>{name}</Text>
+                    <Text style={{ ...FONTS.body3, color: COLORS.white, textAlign: "center" }}>{email}</Text>
                 </View>
             </View>
         </View>
