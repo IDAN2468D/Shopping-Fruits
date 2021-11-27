@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { COLORS, FONTS, SIZES } from '../constants';
 import CategoryFruits from '../Components/CategoryFruits';
 
-const appliancesURL = "http://192.168.1.102:3001/appliances";
+const appliancesURL = "https://rocky-lake-73739.herokuapp.com/appliances";
 
 
 function renderHeader() {

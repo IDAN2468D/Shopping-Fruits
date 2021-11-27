@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { COLORS, icons, FONTS, SIZES } from '../constants';
-import Search from '../Components/Search';
 
 function LogoTitle({ name }) {
     return (
@@ -27,13 +26,13 @@ function LogoTitle({ name }) {
                         {name}
                     </Text>
                 </View>
-                <View style={{ paddingHorizontal: 230 }}>
+                <View style={{ paddingHorizontal: 300 }}>
                     <TouchableOpacity onPress={() => console.log("Navigtions")}>
                         <Image
                             source={icons.Navigtions}
                             style={{
-                                width: 17,
-                                height: 17,
+                                width: 20,
+                                height: 20,
                                 alignItems: "flex-end",
                             }}
                         />

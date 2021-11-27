@@ -4,8 +4,8 @@ import { View, Text, FlatList, ScrollView, ActivityIndicator } from 'react-nativ
 import { COLORS, SIZES, FONTS } from '../constants';
 import CategoryCard from '../Components/CategoryCard';
 
-const shopURL = "http://192.168.1.102:3001/shop";
-const foodURL = "http://192.168.1.102:3001/foods";
+const shopURL = "https://rocky-lake-73739.herokuapp.com/shop";
+const foodURL = "https://rocky-lake-73739.herokuapp.com/foods";
 
 function renderHeader() {
 
