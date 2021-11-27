@@ -70,7 +70,7 @@ function Vegetables() {
             {isLoading ? <ActivityIndicator /> : (
                 <FlatList
                     data={fruits}
-                    keyExtractor={item => `${item.id}`}
+                    keyExtractor={fruitss => `${fruitss.id}`}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     keyboardDismissMode="on-drag"

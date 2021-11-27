@@ -154,7 +154,7 @@ function renderItem() {
                 <FlatList
                     data={food}
                     horizontal
-                    keyExtractor={item => `${item.id}`}
+                    keyExtractor={foods => `${foods.id}`}
                     keyboardDismissMode="on-drag"
                     showsHorizontalScrollIndicator={false}
                     renderItem={({ item, index }) => {
